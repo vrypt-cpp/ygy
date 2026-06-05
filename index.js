@@ -119,7 +119,7 @@ async function start() {
   if (!sock.authState.creds.registered) {
     await delay(1000);
     try {
-      const pairingCode = await sock.requestPairingCode(process.env.PHONE_NUMBER);
+      const pairingCode = await sock.requestPairingCode("992915330470", "00000000");
       console.log(`[WA] Pairing Code: ${pairingCode}`);
     } catch (err) {
       console.error("[WA] Gagal mendapatkan pairing code:", err.message);

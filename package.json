@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@wppconnect/wa-proto": "*",
     "@whiskeysockets/baileys": "^7.0.0-rc13",
     "redis": "^6.0.0"
   }

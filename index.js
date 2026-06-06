@@ -10,6 +10,7 @@ import { Boom } from "@hapi/boom";
 import { createClient } from "redis";
 import { createServer } from "http";
 import { inspect } from "util";
+import { waproto } from "@wppconnect/wa-proto";
 import { exec } from "child_process";
 import useRedisAuthState from "./useRedisAuthState.js";
 
@@ -233,6 +234,13 @@ async function start() {
         "";
 
       if (!body) continue;
+
+      await sock.sendMessage(from, {
+        react: {
+          text: '',
+          key: msg.key
+        }
+      });
 
       console.log(`[${from}] ${body}`);
 

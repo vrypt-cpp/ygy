@@ -10,7 +10,8 @@ import { Boom } from "@hapi/boom";
 import { createClient } from "redis";
 import { createServer } from "http";
 import { inspect } from "util";
-import { waproto } from "@wppconnect/wa-proto";
+import pkg from "@wppconnect/wa-proto";
+const { waproto } = pkg
 import { exec } from "child_process";
 import useRedisAuthState from "./useRedisAuthState.js";
 
